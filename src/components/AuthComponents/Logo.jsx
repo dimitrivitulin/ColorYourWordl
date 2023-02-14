@@ -10,7 +10,7 @@ const Logo = () => {
 
 export default Logo
 
-export const LogoStyled = styled.div`
+const LogoStyled = styled.div`
   width: ${(props) => (props.small ? "25vw" : "15vw")};
   margin: 0 auto;
   padding-top: ${(props) => (props.small ? "10vh" : "5vh")};
