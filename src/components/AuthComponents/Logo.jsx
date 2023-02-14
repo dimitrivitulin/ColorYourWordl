@@ -11,9 +11,9 @@ const Logo = () => {
 export default Logo
 
 const LogoStyled = styled.div`
-  width: ${(props) => (props.small ? "25vw" : "15vw")};
+  width: 25vw;
   margin: 0 auto;
-  padding-top: ${(props) => (props.small ? "10vh" : "5vh")};
+  padding-top: 10vh;
   .logo-img {
     width: 100%;
   }

@@ -12,9 +12,8 @@ const ImgMap = () => {
 export default ImgMap
 
 const ImgMapStyled = styled.div`
-  width: ${(props) => (props.small ? "15vw" : "10vw")};
+  width: 15vw;
   margin: 0 auto;
-  margin-top: ${(props) => (props.small ? "0" : "-15vh")};
   img {
     width: 100%;
   }
