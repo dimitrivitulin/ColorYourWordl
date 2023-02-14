@@ -1,20 +1,19 @@
 import React, { useContext, useRef, useState } from "react"
 import { UserContext } from "../contexts/AuthContext"
 import { useNavigate } from "react-router-dom"
-
-import { Button } from "../components/styles/Button.styled"
-import { Validation } from "../components/styles/Validation.styled"
-import { InputWrap } from "../components/styles/InputWrap.styled"
+// import { Validation } from "../components/styles/Validation.styled"
 import AuthBox from "../components/reusable-ui/layouts/AuthBox"
 import InputBox from "../components/reusable-ui/layouts/InputBox"
+import Input from "../components/reusable-ui/Input"
+import Button from "../components/reusable-ui/Button"
+import Validation from "../components/reusable-ui/Validation"
 
 const Register = () => {
   const { register } = useContext(UserContext)
   const navigate = useNavigate()
-
   const [validation, setValidation] = useState("")
-
   const inputs = useRef([])
+
   const addInputs = (el) => {
     if (el && !inputs.current.includes(el)) {
       inputs.current.push(el)
@@ -57,27 +56,27 @@ const Register = () => {
   return (
     <AuthBox>
       <InputBox onSubmit={handleForm}>
-        <InputWrap
+        <Input
           type="email"
           name="email"
           placeholder="Votre email"
-          ref={addInputs}
+          reference={addInputs}
           small
         />
 
-        <InputWrap
+        <Input
           type="password"
           name="password"
           placeholder="Votre mot de passe"
-          ref={addInputs}
+          reference={addInputs}
           small
         />
 
-        <InputWrap
+        <Input
           type="password"
           name="repeat-password"
           placeholder="Répéter votre mot de passe"
-          ref={addInputs}
+          reference={addInputs}
           small
         />
 
